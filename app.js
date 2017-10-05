@@ -89,7 +89,7 @@ function Descifrar(){
       for (var i = 0; i < upperStr2.length; i++) { //para recorrer mi frase ya en mayuscula y trabajar con lo entregado
         //console.log(mayusFrase2[i]);
         var codeAscii= upperStr2.charCodeAt(i); //sacamos el codigo ascii de la letra para utilizarlo en nuestro codigo
-        var formDecipher = (codeAscii - 65 - 33) %26 +65; // la cambiamos a -n ya que ahora necesitamos su desplazamiento inverso
+        var formDecipher = (codeAscii + 65 - 33) %26 +65; // la cambiamos a -n ya que ahora necesitamos su desplazamiento inverso
         var asciiToStr = String.fromCharCode(formDecipher); //obtenemos la letra correspondiente a el numero ascii obtenido
         //ahora usamos nuestro array vacio para ingresar los valores obtenidos en forma de array
           arrayDecipher.push(asciiToStr); // ["A","B","C",]
